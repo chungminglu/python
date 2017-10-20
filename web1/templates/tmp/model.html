@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+	<head lang="utf-8">
+		<!--<meta http-equiv="refresh" content="30;url=" />-->
+		<meta charset="utf-8" />
+		{%block title%}
+		<title>MODEL</title>
+		{%end%}
+		<link rel="stylesheet" href="{{static_url("css/mui.min.css")}}" />
+		<link rel="stylesheet" href="{{static_url("css/mycss.css")}}" />
+
+		<script src="{{static_url("js/jquery-1.8.0.min.js")}}"></script>
+		<script src="{{static_url("js/mui.min.js")}}"></script>
+		<script src="{{static_url("js/myjs.js")}}"></script>
+		
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();	      	
+	    </script>		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-list mui-pull-left"></a>
+		    <a class="mui-icon mui-icon-contact mui-pull-right"></a>		    
+		    <h1 class="mui-title">八國聯軍 v 0.0.1</h1>
+		    
+		    <div class="mui-switch mui-active" id="switch">
+  				<div class="mui-switch-handle"></div>
+			</div>
+			
+		</header>
+		<div style=margin-top:50px;margin-left:5px>
+		 <ul class="mui-table-view"> 
+		    <li class="mui-table-view-cell mui-collapse mui-active">
+		        <a class="mui-navigate-right" href="#">面板1</a>
+		        <div class="mui-collapse-content">
+		        	
+					<div class="mui-slider" id="slider">
+					  <div class="mui-slider-group mui-slider-loop">
+					    <div class="mui-slider-item"><a href="#"><img src="../static/img/4.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="../static/img/1.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="../static/img/2.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="../static/img/4.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="../static/img/1.jpg" /></a></div>
+					  </div>
+					</div>		        	
+		        	
+		            <p>面板1子内容</p>
+		            <p>面板1子内容</p>
+		            <p>面板1子内容</p>
+		        </div>
+		    </li>
+		    <li class="mui-table-view-cell mui-collapse">
+		        <a class="mui-navigate-right" href="#">面板2</a>
+		        <div class="mui-collapse-content">
+		        	<div id="panel2" style="float: left;padding: 5px 5px 5px 5px;">
+			            <p>面板1子内容</p>
+			            <p>面板1子内容</p>
+			            <p>面板1子内容</p>		        		
+		        	</div>
+		        	<div style="float: left;padding: 5px 5px 5px 5px;">
+	  					<p>面板2子内容</p>
+			            <p>面板2子内容</p>
+			            <p>面板2子内容</p>			        		
+			            <p>面板2子内容</p>
+			            <p>面板2子内容</p>			        		
+			            <p>面板2子内容</p>
+			            <p>面板2子内容</p>			        		
+		        	</div>
+		        	<p style="clear: left;"></p>
+		        	<div style="float: left;padding: 5px 5px 5px 5px;">
+	  					<p>面板3子内容</p>
+			            <p>面板3子内容</p>
+			            <p>面板3子内容</p>			        		
+		        	</div>
+		        </div>		        
+		    </li>
+		</ul>
+		{%block header%}
+		<header>
+			頁首
+		</header>
+		{%end%} 
+		{%block table%}
+		<table id="mytable" border=1px>
+			<tr>
+				<th></th>
+				<th class="mytds"></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td class="mytds"></td>
+				<td id="mytd"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="mytds"></td>
+				<td></td>
+				<td class="mytds"></td>
+			</tr>
+		</table>
+		<div id="mydiv">mydiv</div>
+		<input type="button" value="Try Try See" /><p> 
+		{%end%}
+		{%block body%}
+		<div>
+		name : 
+			<input type="text" id="username"  />
+		password :
+			<input type="text" id="password" />
+		<input type="button" id="login" value="RUN" />
+		</div>
+		{%end%}
+		<footer>
+		{% block footer %} 頁尾 {% end %}
+		</footer>
+		
+		<script>
+//			$("div").click(function() {
+//				alert("QQQQQQQQ");
+//			})
+
+//			$("input[type=button]").click(function() {
+//				alert("Try see see ...");
+//			})
+		
+			var slider = mui("#slider");
+			document.getElementById("switch").addEventListener('toggle', function(e) {
+				if (e.detail.isActive) {
+					slider.slider({
+						interval: 500
+					});
+				} else {
+					slider.slider({
+						interval: 0
+					});
+				}
+			});
+						
+			$(document).ready(function(){
+				$("#login").click(function(){
+					var user = $("#username").val();
+					var pwd = $("#password").val();
+					var pd = {"username":user,"password":pwd};
+					$.ajax({
+						type:"post",
+						url:"/test",
+						data:pd,
+						cache:false,
+						success:function(data){
+							alert(data);
+						},
+						error:function(){
+							alert("error");
+						}
+					})
+				})
+			})			
+		</script>
+		</div>
+	</body>
+</html>
