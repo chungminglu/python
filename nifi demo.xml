@@ -1,0 +1,1940 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description></description>
+  <groupId>801728b8-0159-1000-1429-a00228bf38ea</groupId>
+  <name>demo_all</name>
+  <snippet>
+    <processGroups>
+      <id>8019898a-0159-1000-0000-000000000000</id>
+      <parentGroupId>801728b8-0159-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments>将文件夹A中的文件移动到文件夹B中</comments>
+      <contents>
+        <connections>
+          <id>801d3871-0159-1000-0000-000000000000</id>
+          <parentGroupId>8019898a-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>8019898a-0159-1000-0000-000000000000</groupId>
+            <id>801cc62f-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>8019898a-0159-1000-0000-000000000000</groupId>
+            <id>801c495f-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <labels>
+          <id>801d855d-0159-1000-0000-000000000000</id>
+          <parentGroupId>8019898a-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>804.0</x>
+            <y>114.0</y>
+          </position>
+          <height>42.0</height>
+          <label>一个文件夹的内容移到另一个文件夹</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>230.0</width>
+        </labels>
+        <processors>
+          <id>801c495f-0159-1000-0000-000000000000</id>
+          <parentGroupId>8019898a-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>398.0</x>
+            <y>136.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Input Directory</key>
+                <value>
+                  <name>Input Directory</name>
+                </value>
+              </entry>
+              <entry>
+                <key>File Filter</key>
+                <value>
+                  <name>File Filter</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Path Filter</key>
+                <value>
+                  <name>Path Filter</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>
+                  <name>Batch Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Keep Source File</key>
+                <value>
+                  <name>Keep Source File</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Recurse Subdirectories</key>
+                <value>
+                  <name>Recurse Subdirectories</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Polling Interval</key>
+                <value>
+                  <name>Polling Interval</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Ignore Hidden Files</key>
+                <value>
+                  <name>Ignore Hidden Files</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Minimum File Age</key>
+                <value>
+                  <name>Minimum File Age</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Maximum File Age</key>
+                <value>
+                  <name>Maximum File Age</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Minimum File Size</key>
+                <value>
+                  <name>Minimum File Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Maximum File Size</key>
+                <value>
+                  <name>Maximum File Size</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Input Directory</key>
+                <value>/data/xiangjie/nifi_test/in</value>
+              </entry>
+              <entry>
+                <key>File Filter</key>
+                <value>[^\.].*</value>
+              </entry>
+              <entry>
+                <key>Path Filter</key>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>10</value>
+              </entry>
+              <entry>
+                <key>Keep Source File</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Recurse Subdirectories</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Polling Interval</key>
+                <value>0 sec</value>
+              </entry>
+              <entry>
+                <key>Ignore Hidden Files</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Minimum File Age</key>
+                <value>0 sec</value>
+              </entry>
+              <entry>
+                <key>Maximum File Age</key>
+              </entry>
+              <entry>
+                <key>Minimum File Size</key>
+                <value>0 B</value>
+              </entry>
+              <entry>
+                <key>Maximum File Size</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>GetFile</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.GetFile</type>
+        </processors>
+        <processors>
+          <id>801cc62f-0159-1000-0000-000000000000</id>
+          <parentGroupId>8019898a-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>1077.0</x>
+            <y>134.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Directory</key>
+                <value>
+                  <name>Directory</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Conflict Resolution Strategy</key>
+                <value>
+                  <name>Conflict Resolution Strategy</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Create Missing Directories</key>
+                <value>
+                  <name>Create Missing Directories</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Maximum File Count</key>
+                <value>
+                  <name>Maximum File Count</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Last Modified Time</key>
+                <value>
+                  <name>Last Modified Time</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Permissions</key>
+                <value>
+                  <name>Permissions</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Owner</key>
+                <value>
+                  <name>Owner</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Group</key>
+                <value>
+                  <name>Group</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Directory</key>
+                <value>/data/xiangjie/nifi_test/out</value>
+              </entry>
+              <entry>
+                <key>Conflict Resolution Strategy</key>
+                <value>fail</value>
+              </entry>
+              <entry>
+                <key>Create Missing Directories</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Maximum File Count</key>
+              </entry>
+              <entry>
+                <key>Last Modified Time</key>
+              </entry>
+              <entry>
+                <key>Permissions</key>
+              </entry>
+              <entry>
+                <key>Owner</key>
+              </entry>
+              <entry>
+                <key>Group</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>PutFile</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.PutFile</type>
+        </processors>
+      </contents>
+      <name>demo_文件移动</name>
+    </processGroups>
+    <processGroups>
+      <id>80c365ec-0159-1000-0000-000000000000</id>
+      <parentGroupId>801728b8-0159-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>492.0</x>
+        <y>3.0</y>
+      </position>
+      <comments>mysql 数据从一个库的A表 迁到另一个数据库的B表</comments>
+      <contents>
+        <connections>
+          <id>812d2786-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>80ed6810-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>80c65113-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>849fb986-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>849ebc4e-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>80ed6810-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>84a4181e-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>84a3ad55-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>original</selectedRelationships>
+          <selectedRelationships>sql</selectedRelationships>
+          <source>
+            <groupId>80c365ec-0159-1000-0000-000000000000</groupId>
+            <id>849ebc4e-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <controllerServices>
+          <id>80c4341e-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <comments></comments>
+          <descriptors>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>
+                <name>Database Connection URL</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>
+                <name>Database Driver Class Name</name>
+              </value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>
+                <name>database-driver-locations</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>
+                <name>Database User</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Password</key>
+              <value>
+                <name>Password</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+              <value>
+                <name>Max Wait Time</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+              <value>
+                <name>Max Total Connections</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+              <value>
+                <name>Validation-query</name>
+              </value>
+            </entry>
+          </descriptors>
+          <name>mysql_180</name>
+          <properties>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>jdbc:mysql://192.168.200.180:3306/xj_test</value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>com.mysql.jdbc.Driver</value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>/data/nifi-1.1.1/lib/mysql-connector-java-5.1.34.jar</value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>xiangjie</value>
+            </entry>
+            <entry>
+              <key>Password</key>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+              <value>60 secs</value>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+            </entry>
+          </properties>
+          <state>ENABLED</state>
+          <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+        </controllerServices>
+        <processors>
+          <id>80c65113-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>314.0</x>
+            <y>162.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                  <name>Database Connection Pooling Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>
+                  <name>SQL select query</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>
+                  <name>Max Wait Time</name>
+                </value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>
+                  <name>dbf-normalize</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>80c4341e-0159-1000-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>SELECT `user_name` FROM `user_info`</value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>0 seconds</value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>10000 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ExecuteSQL</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.ExecuteSQL</type>
+        </processors>
+        <processors>
+          <id>80ed6810-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>312.0</x>
+            <y>373.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JSON container options</key>
+                <value>
+                  <name>JSON container options</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>
+                  <name>Wrap Single Record</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+                <value>
+                  <name>Avro schema</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JSON container options</key>
+                <value>array</value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ConvertAvroToJSON</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.avro.ConvertAvroToJSON</type>
+        </processors>
+        <processors>
+          <id>849ebc4e-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>312.92688472736097</x>
+            <y>588.2708907794148</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JDBC Connection Pool</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                  <name>JDBC Connection Pool</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Statement Type</key>
+                <value>
+                  <name>Statement Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Table Name</key>
+                <value>
+                  <name>Table Name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Catalog Name</key>
+                <value>
+                  <name>Catalog Name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Schema Name</key>
+                <value>
+                  <name>Schema Name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Translate Field Names</key>
+                <value>
+                  <name>Translate Field Names</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Unmatched Field Behavior</key>
+                <value>
+                  <name>Unmatched Field Behavior</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Unmatched Column Behavior</key>
+                <value>
+                  <name>Unmatched Column Behavior</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Update Keys</key>
+                <value>
+                  <name>Update Keys</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jts-quoted-identifiers</key>
+                <value>
+                  <name>jts-quoted-identifiers</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JDBC Connection Pool</key>
+                <value>80c4341e-0159-1000-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>Statement Type</key>
+                <value>INSERT</value>
+              </entry>
+              <entry>
+                <key>Table Name</key>
+                <value>user_info_2</value>
+              </entry>
+              <entry>
+                <key>Catalog Name</key>
+              </entry>
+              <entry>
+                <key>Schema Name</key>
+              </entry>
+              <entry>
+                <key>Translate Field Names</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Unmatched Field Behavior</key>
+                <value>Ignore Unmatched Fields</value>
+              </entry>
+              <entry>
+                <key>Unmatched Column Behavior</key>
+                <value>Fail on Unmatched Columns</value>
+              </entry>
+              <entry>
+                <key>Update Keys</key>
+              </entry>
+              <entry>
+                <key>jts-quoted-identifiers</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ConvertJSONToSQL</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>original</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>sql</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.ConvertJSONToSQL</type>
+        </processors>
+        <processors>
+          <id>84a3ad55-0159-1000-0000-000000000000</id>
+          <parentGroupId>80c365ec-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>311.2274966543471</x>
+            <y>824.089504626104</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JDBC Connection Pool</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                  <name>JDBC Connection Pool</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Support Fragmented Transactions</key>
+                <value>
+                  <name>Support Fragmented Transactions</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Transaction Timeout</key>
+                <value>
+                  <name>Transaction Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>
+                  <name>Batch Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Obtain Generated Keys</key>
+                <value>
+                  <name>Obtain Generated Keys</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JDBC Connection Pool</key>
+                <value>80c4341e-0159-1000-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>Support Fragmented Transactions</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Transaction Timeout</key>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>100</value>
+              </entry>
+              <entry>
+                <key>Obtain Generated Keys</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>PutSQL</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>retry</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.PutSQL</type>
+        </processors>
+      </contents>
+      <name>demo_mysql数据迁移</name>
+    </processGroups>
+    <processGroups>
+      <id>853b79b6-0159-1000-0000-000000000000</id>
+      <parentGroupId>801728b8-0159-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>6.0</x>
+        <y>327.0</y>
+      </position>
+      <comments>将mysql表A中的数据写到hdfs中</comments>
+      <contents>
+        <connections>
+          <id>85489a0f-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>853b79b6-0159-1000-0000-000000000000</groupId>
+            <id>854864f5-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>853b79b6-0159-1000-0000-000000000000</groupId>
+            <id>853d5b56-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>8548ab16-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>853b79b6-0159-1000-0000-000000000000</groupId>
+            <id>853ea615-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>853b79b6-0159-1000-0000-000000000000</groupId>
+            <id>854864f5-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <controllerServices>
+          <id>853c11e8-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <comments></comments>
+          <descriptors>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>
+                <name>Database Connection URL</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>
+                <name>Database Driver Class Name</name>
+              </value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>
+                <name>database-driver-locations</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>
+                <name>Database User</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Password</key>
+              <value>
+                <name>Password</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+              <value>
+                <name>Max Wait Time</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+              <value>
+                <name>Max Total Connections</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+              <value>
+                <name>Validation-query</name>
+              </value>
+            </entry>
+          </descriptors>
+          <name>mysql_180</name>
+          <properties>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>jdbc:mysql://192.168.200.180:3306/xj_test</value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>com.mysql.jdbc.Driver</value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>/data/nifi-1.1.1/lib/mysql-connector-java-5.1.34.jar</value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>xiangjie</value>
+            </entry>
+            <entry>
+              <key>Password</key>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+              <value>60 secs</value>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+            </entry>
+          </properties>
+          <state>ENABLED</state>
+          <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+        </controllerServices>
+        <processors>
+          <id>853d5b56-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>657.0</x>
+            <y>149.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                  <name>Database Connection Pooling Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>
+                  <name>SQL select query</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>
+                  <name>Max Wait Time</name>
+                </value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>
+                  <name>dbf-normalize</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>853c11e8-0159-1000-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>SELECT `user_id`,`user_name` FROM `user_info`</value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>0 seconds</value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>10000sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ExecuteSQL</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.ExecuteSQL</type>
+        </processors>
+        <processors>
+          <id>853ea615-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>660.0</x>
+            <y>588.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Hadoop Configuration Resources</key>
+                <value>
+                  <name>Hadoop Configuration Resources</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Kerberos Principal</key>
+                <value>
+                  <name>Kerberos Principal</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Kerberos Keytab</key>
+                <value>
+                  <name>Kerberos Keytab</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Kerberos Relogin Period</key>
+                <value>
+                  <name>Kerberos Relogin Period</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Additional Classpath Resources</key>
+                <value>
+                  <name>Additional Classpath Resources</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Directory</key>
+                <value>
+                  <name>Directory</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Conflict Resolution Strategy</key>
+                <value>
+                  <name>Conflict Resolution Strategy</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Block Size</key>
+                <value>
+                  <name>Block Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>IO Buffer Size</key>
+                <value>
+                  <name>IO Buffer Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Replication</key>
+                <value>
+                  <name>Replication</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Permissions umask</key>
+                <value>
+                  <name>Permissions umask</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Remote Owner</key>
+                <value>
+                  <name>Remote Owner</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Remote Group</key>
+                <value>
+                  <name>Remote Group</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Compression codec</key>
+                <value>
+                  <name>Compression codec</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Hadoop Configuration Resources</key>
+                <value>/data/xiangjie/hdfs_conf/core-site.xml,/data/xiangjie/hdfs_conf/hdfs-site.xml</value>
+              </entry>
+              <entry>
+                <key>Kerberos Principal</key>
+              </entry>
+              <entry>
+                <key>Kerberos Keytab</key>
+              </entry>
+              <entry>
+                <key>Kerberos Relogin Period</key>
+                <value>4 hours</value>
+              </entry>
+              <entry>
+                <key>Additional Classpath Resources</key>
+              </entry>
+              <entry>
+                <key>Directory</key>
+                <value>/usrs/xiangjie/nifi_test</value>
+              </entry>
+              <entry>
+                <key>Conflict Resolution Strategy</key>
+                <value>fail</value>
+              </entry>
+              <entry>
+                <key>Block Size</key>
+              </entry>
+              <entry>
+                <key>IO Buffer Size</key>
+              </entry>
+              <entry>
+                <key>Replication</key>
+              </entry>
+              <entry>
+                <key>Permissions umask</key>
+              </entry>
+              <entry>
+                <key>Remote Owner</key>
+              </entry>
+              <entry>
+                <key>Remote Group</key>
+              </entry>
+              <entry>
+                <key>Compression codec</key>
+                <value>NONE</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>PutHDFS</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
+        </processors>
+        <processors>
+          <id>854864f5-0159-1000-0000-000000000000</id>
+          <parentGroupId>853b79b6-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>661.0</x>
+            <y>367.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JSON container options</key>
+                <value>
+                  <name>JSON container options</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>
+                  <name>Wrap Single Record</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+                <value>
+                  <name>Avro schema</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JSON container options</key>
+                <value>array</value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ConvertAvroToJSON</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.avro.ConvertAvroToJSON</type>
+        </processors>
+      </contents>
+      <name>demo_mysql数据到hdfs</name>
+    </processGroups>
+    <processGroups>
+      <id>858f1712-0159-1000-0000-000000000000</id>
+      <parentGroupId>801728b8-0159-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>490.0</x>
+        <y>326.0</y>
+      </position>
+      <comments>将mysql表A中的数据写到es</comments>
+      <contents>
+        <connections>
+          <id>8642aa2c-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>864278d3-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>85cbb485-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>86489cc5-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>8648713b-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <prioritizers>org.apache.nifi.prioritizer.FirstInFirstOutPrioritizer</prioritizers>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>864278d3-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>864bae2a-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>864b68cb-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>original</selectedRelationships>
+          <selectedRelationships>split</selectedRelationships>
+          <source>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>8648713b-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>864be1b1-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>85cc7124-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>858f1712-0159-1000-0000-000000000000</groupId>
+            <id>864b68cb-0159-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <controllerServices>
+          <id>858f6995-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <comments></comments>
+          <descriptors>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>
+                <name>Database Connection URL</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>
+                <name>Database Driver Class Name</name>
+              </value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>
+                <name>database-driver-locations</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>
+                <name>Database User</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Password</key>
+              <value>
+                <name>Password</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+              <value>
+                <name>Max Wait Time</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+              <value>
+                <name>Max Total Connections</name>
+              </value>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+              <value>
+                <name>Validation-query</name>
+              </value>
+            </entry>
+          </descriptors>
+          <name>mysql_180</name>
+          <properties>
+            <entry>
+              <key>Database Connection URL</key>
+              <value>jdbc:mysql://192.168.200.180:3306/xj_test</value>
+            </entry>
+            <entry>
+              <key>Database Driver Class Name</key>
+              <value>com.mysql.jdbc.Driver</value>
+            </entry>
+            <entry>
+              <key>database-driver-locations</key>
+              <value>/data/nifi-1.1.1/lib/mysql-connector-java-5.1.34.jar</value>
+            </entry>
+            <entry>
+              <key>Database User</key>
+              <value>xiangjie</value>
+            </entry>
+            <entry>
+              <key>Password</key>
+            </entry>
+            <entry>
+              <key>Max Wait Time</key>
+            </entry>
+            <entry>
+              <key>Max Total Connections</key>
+            </entry>
+            <entry>
+              <key>Validation-query</key>
+            </entry>
+          </properties>
+          <state>ENABLED</state>
+          <type>org.apache.nifi.dbcp.DBCPConnectionPool</type>
+        </controllerServices>
+        <processors>
+          <id>85cbb485-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>613.0</x>
+            <y>103.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                  <name>Database Connection Pooling Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>
+                  <name>SQL select query</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>
+                  <name>Max Wait Time</name>
+                </value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>
+                  <name>dbf-normalize</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Database Connection Pooling Service</key>
+                <value>858f6995-0159-1000-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>SQL select query</key>
+                <value>SELECT `user_id`,`user_name` FROM `user_info`</value>
+              </entry>
+              <entry>
+                <key>Max Wait Time</key>
+                <value>0 seconds</value>
+              </entry>
+              <entry>
+                <key>dbf-normalize</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>1000 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ExecuteSQL</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.ExecuteSQL</type>
+        </processors>
+        <processors>
+          <id>85cc7124-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>1267.0</x>
+            <y>340.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Cluster Name</key>
+                <value>
+                  <name>Cluster Name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>ElasticSearch Hosts</key>
+                <value>
+                  <name>ElasticSearch Hosts</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                  <name>SSL Context Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Shield Plugin Filename</key>
+                <value>
+                  <name>Shield Plugin Filename</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Username</key>
+                <value>
+                  <name>Username</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Password</key>
+                <value>
+                  <name>Password</name>
+                </value>
+              </entry>
+              <entry>
+                <key>ElasticSearch Ping Timeout</key>
+                <value>
+                  <name>ElasticSearch Ping Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Sampler Interval</key>
+                <value>
+                  <name>Sampler Interval</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Identifier Attribute</key>
+                <value>
+                  <name>Identifier Attribute</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Index</key>
+                <value>
+                  <name>Index</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Type</key>
+                <value>
+                  <name>Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Character Set</key>
+                <value>
+                  <name>Character Set</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>
+                  <name>Batch Size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Index Operation</key>
+                <value>
+                  <name>Index Operation</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Cluster Name</key>
+                <value>es_cluster_changsha</value>
+              </entry>
+              <entry>
+                <key>ElasticSearch Hosts</key>
+                <value>192.168.200.95:9300</value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+              </entry>
+              <entry>
+                <key>Shield Plugin Filename</key>
+              </entry>
+              <entry>
+                <key>Username</key>
+              </entry>
+              <entry>
+                <key>Password</key>
+              </entry>
+              <entry>
+                <key>ElasticSearch Ping Timeout</key>
+                <value>5s</value>
+              </entry>
+              <entry>
+                <key>Sampler Interval</key>
+                <value>5s</value>
+              </entry>
+              <entry>
+                <key>Identifier Attribute</key>
+                <value>uuid</value>
+              </entry>
+              <entry>
+                <key>Index</key>
+                <value>xj_test</value>
+              </entry>
+              <entry>
+                <key>Type</key>
+                <value>user_info</value>
+              </entry>
+              <entry>
+                <key>Character Set</key>
+                <value>UTF-8</value>
+              </entry>
+              <entry>
+                <key>Batch Size</key>
+                <value>100</value>
+              </entry>
+              <entry>
+                <key>Index Operation</key>
+                <value>index</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>PutElasticsearch</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>retry</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.elasticsearch.PutElasticsearch</type>
+        </processors>
+        <processors>
+          <id>864278d3-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>613.0</x>
+            <y>316.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JSON container options</key>
+                <value>
+                  <name>JSON container options</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>
+                  <name>Wrap Single Record</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+                <value>
+                  <name>Avro schema</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JSON container options</key>
+                <value>array</value>
+              </entry>
+              <entry>
+                <key>Wrap Single Record</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Avro schema</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ConvertAvroToJSON</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.avro.ConvertAvroToJSON</type>
+        </processors>
+        <processors>
+          <id>8648713b-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>613.0</x>
+            <y>569.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>JsonPath Expression</key>
+                <value>
+                  <name>JsonPath Expression</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>
+                  <name>Null Value Representation</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>JsonPath Expression</key>
+                <value>$.*</value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>empty string</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>SplitJson</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>original</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>split</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.SplitJson</type>
+        </processors>
+        <processors>
+          <id>864b68cb-0159-1000-0000-000000000000</id>
+          <parentGroupId>858f1712-0159-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>1266.0</x>
+            <y>570.0</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>jolt-transform</key>
+                <value>
+                  <name>jolt-transform</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-custom-class</key>
+                <value>
+                  <name>jolt-custom-class</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-custom-modules</key>
+                <value>
+                  <name>jolt-custom-modules</name>
+                </value>
+              </entry>
+              <entry>
+                <key>jolt-spec</key>
+                <value>
+                  <name>jolt-spec</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>jolt-transform</key>
+                <value>jolt-transform-sort</value>
+              </entry>
+              <entry>
+                <key>jolt-custom-class</key>
+              </entry>
+              <entry>
+                <key>jolt-custom-modules</key>
+              </entry>
+              <entry>
+                <key>jolt-spec</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>JoltTransformJSON</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.JoltTransformJSON</type>
+        </processors>
+      </contents>
+      <name>demo_mysql数据到es</name>
+    </processGroups>
+  </snippet>
+  <timestamp>01/10/2017 11:01:21 CST</timestamp>
+</template>

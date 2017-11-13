@@ -8,10 +8,10 @@ from boss_train import Model
 #from image_show import show_image
 
 if __name__ == '__main__':
-    # cap = cv2.VideoCapture(0)
-    cap = cv2.VideoCapture('d:/video/1.mp4')    
+    cap = cv2.VideoCapture(0)
+    # cap = cv2.VideoCapture('d:/video/1.mp4')    
     #cap = cv2.VideoCapture('rtsp://192.168.43.209:554')
-    cascade_path = "d:/code/python/boss/haarcascade_frontalface_alt.xml"
+    cascade_path = "d:/code/python/bossWin/haarcascade_frontalface_alt.xml"
     model = Model()
     model.load()
     
@@ -65,7 +65,7 @@ if __name__ == '__main__':
                         cv2.putText(frame,"SeaFood !! .....",(10,300),font,3,(0,0,255),1,False) 
 
 
-                        os.system('spd-say "sea food"')
+                        # os.system('spd-say "sea food"')
                         # time.sleep(1)
                         # ser = serial.Serial(
                         #     port='/dev/ttyUSB0',

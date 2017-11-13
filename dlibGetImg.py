@@ -30,7 +30,8 @@ def relight(img, light=1, bias=0):
 #使用dlib自带的frontal_face_detector作为我们的特征提取器
 detector = dlib.get_frontal_face_detector()
 # 打开摄像头 参数为输入流，可以为摄像头或视频文件
-camera = cv2.VideoCapture('d:/video/'+ videoName +'.mp4')
+camera = cv2.VideoCapture("rtsp://admin:DPUEPA@192.168.1.127/stream")
+# camera = cv2.VideoCapture('d:/video/'+ videoName +'.mp4')
 # camera = cv2.VideoCapture(0)
 index = 1
 while True:
@@ -52,11 +53,14 @@ while True:
             face = img[x1:y1,x2:y2]
             # 调整图片的对比度与亮度， 对比度与亮度值都取随机数，这样能增加样本的多样性
             face = relight(face, random.uniform(0.5, 1.5), random.randint(-50, 50))
+
             face = cv2.resize(face, (size,size))
+
             cv2.imshow('image', face)
+
             cv2.imwrite(output_dir+'/'+str(index)+'.jpg', face)
+
             index += 1
-            
         key = cv2.waitKey(1) & 0xff
         if key == 27:
             break

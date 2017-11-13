@@ -26,7 +26,7 @@ class Dataset(object):
         self.Y_test = None
 
     def read(self, img_rows=IMAGE_SIZE, img_cols=IMAGE_SIZE, img_channels=3, nb_classes=2):
-        images, labels = extract_data('d:/code/python/boss/data')
+        images, labels = extract_data('d:/code/python/bossWin/data')
         
         # numpy.reshape
         labels = np.reshape(labels, [-1])
@@ -73,7 +73,7 @@ class Dataset(object):
 
 class Model(object):
 
-    FILE_PATH = 'd:/code/python/boss/store/model.h5'
+    FILE_PATH = 'd:/code/python/bossWin/store/model.h5'
 
     def __init__(self):
         self.model = None
@@ -166,7 +166,8 @@ class Model(object):
         
         # 樣本proba
         result = self.model.predict_proba(image)
-        print(result[0][0],result[0][1],result[0][0]+result[0][1])
+        print(result.size)
+        # print(result[0][0],result[0][1],result[0][0]+result[0][1])
 
         # 分類條件
         result = self.model.predict_classes(image)
