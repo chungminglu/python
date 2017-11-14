@@ -27,7 +27,7 @@ class Dataset(object):
         self.Y_test = None
 
     def read(self, img_rows=IMAGE_SIZE, img_cols=IMAGE_SIZE, img_channels=3, nb_classes=nbClasses):
-        images, labels = extract_data('C:/Users/Hsiung/Desktop/tmp/bossWin/data')
+        images, labels = extract_data('D:/code/python/tmp/bossWin/data')
         
         # numpy.reshape
         labels = np.reshape(labels, [-1])
@@ -73,7 +73,7 @@ class Dataset(object):
 
 class Model(object):
 
-    FILE_PATH = 'C:/Users/Hsiung/Desktop/tmp/bossWin/store/model.h5'
+    FILE_PATH = 'D:/code/python/tmp/bossWin/store/model.h5'
 
     def __init__(self):
         self.model = None

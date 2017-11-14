@@ -3,7 +3,7 @@ from __future__ import print_function
 import os
 import numpy as np
 import cv2
-IMAGE_SIZE = 64
+IMAGE_SIZE = 256
 
 def resize_with_pad(image, height=IMAGE_SIZE, width=IMAGE_SIZE):
     def get_padding_size(image):
